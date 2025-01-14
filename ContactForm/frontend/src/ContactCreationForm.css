@@ -1,0 +1,157 @@
+/* 1) Import Google Fonts:
+   - Roboto Slab for header & submit button
+   - Ubuntu for everything else
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=Ubuntu:wght@400;500&display=swap');
+
+/* 2) Basic body styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d9d9d9; /* Soft gray */
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* 3) The form "card" container */
+.form-container {
+  max-width: 700px;
+  margin: 3rem auto;            /* auto-centers horizontally */
+  background-color: #fefcf8;    /* Off-white background */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 2rem 2.5rem;         /* equal left/right internal spacing */
+}
+
+/* 4) Heading in Roboto Slab */
+.form-container h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* 5) Description in Ubuntu */
+.form-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem; /* consistent spacing before the next row */
+}
+
+/* 6) We'll keep a consistent margin-bottom for row-like elements */
+.form-row,
+.form-group,
+.button-row {
+  margin-bottom: 1.5rem;
+}
+
+/* 7) Side-by-side fields */
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start; 
+}
+
+/* 8) .form-group for each label + input (or select) */
+.form-group {
+  flex: 1; /* only matters when used inside a .form-row */
+}
+
+/* 9) Labels in Ubuntu */
+.form-group label {
+  display: block;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+/* 10) Inputs in Ubuntu */
+.form-group input {
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #263c5a; /* match button color for consistency */
+}
+
+/* 11) SELECT in Ubuntu (to match input styling) */
+.form-group select {
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: #263c5a;
+}
+
+/* 12) Connect button in Ubuntu + flex for text + logo on the right */
+.connect-button {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #263c5a;  /* A navy-ish blue that pairs well with orange */
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* space between text and the logo */
+}
+
+.connect-button:hover {
+  background-color: #1f324c;
+}
+
+.connect-button:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+}
+
+/* 13) Submit button in Roboto Slab, same color scheme */
+.submit-button {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #263c5a;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #1f324c;
+}
+
+.submit-button:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+}
+
+/* 14) The HubSpot logo image sizing */
+.hubspot-logo {
+  width: 20px;
+  height: 20px;
+  display: block;
+}

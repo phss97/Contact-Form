@@ -1,0 +1,17 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.0",
+    "nodemon": "^3.1.9"
+  },
+  "scripts": {
+    "start": "nodemon fetchToken.js",
+    "dev": "nodemon fetchToken.js"
+  }
+}
